@@ -1,0 +1,131 @@
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+  
+      overflow: hidden;
+      background: linear-gradient(to top, #2c3e50, #f39c12);
+      animation: skyColor 10s forwards;
+      position: relative;
+
+      
+    }
+
+    /* sun */
+    .sun {
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(circle at center, #ffdd00, #ffaa00);
+      border-radius: 50%;
+      position: absolute;
+      bottom: 100px;
+      left: 60px;
+      z-index: 0;
+      box-shadow: 0 0 60px 20px #ffdd00;
+      animation: sunRise 10s ease-in-out forwards;
+    }
+
+    .mountains {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 250px;
+      background: #8B4513; /* brown mountain color */
+      clip-path: polygon(
+        0% 100%, 10% 60%, 20% 80%, 30% 50%,
+        40% 70%, 50% 40%, 60% 75%, 70% 55%,
+        80% 70%, 90% 50%, 100% 100%
+      );
+      z-index: 1;
+    }
+
+    @keyframes sunRise {
+      0% {
+        bottom: 100px;
+        left: 60px;
+      }
+      100% {
+        bottom: 90%;
+        left: 60px;
+      }
+    }
+
+    @keyframes skyColor {
+      0% {
+        background: linear-gradient(to top, #2c3e50, #f39c12);
+      }
+      100% {
+        background: linear-gradient(to top, #87ceeb, #fceabb);
+      }
+    }
+
+    /* weather */
+    .card {
+      background: rgb(135, 206, 235);
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+    }
+    .card span{
+      /* font-size: 32px;
+      font-weight: 700;
+      
+      
+      color: blue;
+      max-width: 600px;
+      
+          animation: slideTop 1s ease forwards;
+          animation-delay: .2s; */
+
+          position: relative;
+          width: 100%;
+          justify-content:space-between ;
+          align-items: center;
+          padding: 10px 0 0;
+          font-size: 32px;
+          font-weight: 700;
+          margin-bottom: 30px;
+          color: rgb(255, 255, 255);
+          animation: slideBottom 1s ease forwards;
+          animation-delay: .7s;
+    }
+    
+    .card input {
+      padding: 10px;
+      width: 70%;
+      border-radius: 8px;
+      border: 1px solid #201e1e;
+      margin-right: 10px;
+    }
+    .card button {
+      
+      cursor: pointer;
+      display: inline-block;
+      padding: 10px 16px;
+      background: blue;
+      border-radius: 40px;
+      box-shadow: 0 0 10px rgb(156, 156, 161);
+      font-size: 16px;
+      color: rgb(255, 255, 255);
+      letter-spacing: 1px;
+      text-decoration: none;
+      font-weight: 600; 
+      
+  }
+    
+    .weather-info {
+      margin-top: 20px;
+    }
+    .weather-info h2 {
+      margin-bottom: 10px;
+    }
+  
